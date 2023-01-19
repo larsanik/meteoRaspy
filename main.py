@@ -36,14 +36,14 @@ def sendMeteoData(temperature_in, humidity_in, pressure_in):
         'Pressure': press,
         'Geocoord': geocoord
     }
-    print(f'Словарь = {param}')
+    # print(f'Словарь = {param}')
 
     # encode the dictionary into the format JSON
     json_param = json.dumps(param)
 
     # sending a POST request with data in the format JSON
     resp = requests.post(url, data=json_param)
-    print(f'Server response = {resp}')
+    # print(f'Server response = {resp}')
 
 
 # call
